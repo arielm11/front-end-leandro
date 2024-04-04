@@ -1,11 +1,27 @@
-* {
+body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 80%;
+    margin: auto;
+}
+header{
+    width: 100%;
+    position: relative  ;
+}
+
+header > img{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 fieldset {
     background-color: whitesmoke;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+#dados_pessoais{
+    margin-top: 1rem;
 }
 
 input{
