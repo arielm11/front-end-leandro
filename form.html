@@ -4,116 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Contatos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="img/logo.jpg" alt="">
+        <h1>Cadastro Pessoal</h1>
+        <img src="/img/logo.jpg" alt="Imagem de um ícone de cadastro.">
     </header>
-    <div>
-        <form action="submit" method="post">
-            <fieldset id="dados_pessoais">
+    <div class="forms">
+        <form action="">
+            <fieldset class="forms">
                 <legend>Dados Pessoais</legend>
-                <label>Nome:</label>
-                <input type="text" required>
-                <label>Email:</label>
-                <input type="email" required><br>
-                <label>Nascimento:</label>
-                <input type="date" required><br>
-                <label>RG:</label>
-                <input type="text" id="DocRg" maxlength="13" required><br>
-                <label>CPF:</label>
-                <input type="text" id="DocCpf" maxlength="14" required>
+                <div class="grid-container">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" required>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <label for="nascimento">Nascimento</label>
+                        <input type="date" name="data_nascimento" required>
+                    </div>
+                    <div>
+                        <label for="rg">RG</label>
+                        <input type="text" name="rg">
+                    </div>
+                    <div>
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" required>
+                    </div>
+                </div>
             </fieldset>
-
-            <fieldset id="endereco">
+            <fieldset class="forms">
                 <legend>Endereço</legend>
-                <label>Rua:</label>
-                <input type="text" required>
-                <label>Número:</label>
-                <input type="number" required><br>
-                <label>Bairro:</label>
-                <input type="text" required><br>
-                <label>Estado:</label>
-                <select name="estados">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select><br>
-                <label>Cidade:</label>
-                <input type="text" required>
-                <label>CEP:</label>
-                <input type="text" required>
+                <div class="grid-container">
+                    <div>
+                        <label for="">Rua:</label>
+                        <input type="text" name="rua" required>
+                        <label for="">Número: </label>
+                        <input type="number" name="numero">
+                    </div>
+                    <div>
+                        <label for="">Bairro:</label>
+                        <input type="text" name="bairro">
+                        <div>
+                            <label for="estado">Estado</label>
+                            <select name="estado">
+                                <option value="ac">Acre</option>
+                                <option value="al">Alagoas</option>
+                                <option value="am">Amazonas</option>
+                                <option value="ap">Amapá</option>
+                                <option value="ba">Bahia</option>
+                                <option value="ce">Ceará</option>
+                                <option value="df">Distrito Federal</option>
+                                <option value="es">Espírito Santo</option>
+                                <option value="go">Goiás</option>
+                                <option value="ma">Maranhão</option>
+                                <option value="mt">Mato Grosso</option>
+                                <option value="ms">Mato Grosso do Sul</option>
+                                <option value="mg">Minas Gerais</option>
+                                <option value="pa">Pará</option>
+                                <option value="pb">Paraíba</option>
+                                <option value="pr">Paraná</option>
+                                <option value="pe">Pernambuco</option>
+                                <option value="pi">Piauí</option>
+                                <option value="rj">Rio de Janeiro</option>
+                                <option value="rn">Rio Grande do Norte</option>
+                                <option value="ro">Rondônia</option>
+                                <option value="rs">Rio Grande do Sul</option>
+                                <option value="rr">Roraima</option>
+                                <option value="sc">Santa Catarina</option>
+                                <option value="se">Sergipe</option>
+                                <option value="sp">São Paulo</option>
+                                <option value="to">Tocantins</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Cidade</label>
+                            <input type="text" name="cidade">
+                        </div>
+                        <div>
+                            <label for="">CEP: </label>
+                            <input type="text" name="cep" id="cep" placeholder="00000-000" pattern="\d{5}\-\d{3}">
+                        </div>
+                    </div>
+                </div>
             </fieldset>
-
-            <fieldset id="login">
+            <fieldset class="forms">
                 <legend>Login</legend>
-                <label>Imagem de perfil:</label>
-                <input type="file" id="foto" name="foto" accept="image/*"><br>
-                <label>Login do Usuário:</label>
-                <input type="text" required><br>
-                <label>Senha:</label>
-                <input type="password" required><br>
-                <label>Confirme a Senha:</label>
-                <input type="password" required>
+                <div class="grid-container">
+                    <div>
+                        <label for="">Imagem de perfil:</label>
+                        <input type="file" name="arquivo" accept="image/*">
+                    </div>
+                    <div>
+                        <label for="login">Login:</label>
+                        <input type="text" name="login" maxlength="10" minlength="6">
+                    </div>
+                    <div>
+                        <label for="">Senha:</label>
+                        <input type="password" name="senha">
+                        <div>
+                            <label for="">Confirmar Senha:</label>
+                            <input type="password" name="confir_senha">
+                        </div>
+                    </div>
+                </div>
             </fieldset>
-
-            <input type="submit" value="Enviar Dados">
-            <input type="reset" value="Limpar">
+            <div>
+                <input type="submit" name="botao_enviar" value="Enviar">
+                <input type="reset" name="botao_limpar" value="Limpar">
+            </div>
         </form>
     </div>
-
-    <footer>
-        <a href="#">Termo de Uso</a>
-        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LGPD para saber mais</a>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript">
-        // Máscara de CPF
-        $('#DocCpf').on('input', function () {
-            let cpf = $(this).val().replace(/\D/g, '');
-            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-            $(this).val(cpf);
-        });
-
-        // Máscara de RG
-        $('#DocRg').on('input', function () {
-            let rg = $(this).val().replace(/\D/g, '');
-            rg = rg.replace(/(\d{2})(\d)/, '$1.$2');
-            rg = rg.replace(/(\d{3})(\d)/, '$1.$2');
-            rg = rg.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-            $(this).val(rg);
-        });
-    </script>
+    <div>
+        <footer>
+            <p> <a href="http://"> Termos de Uso </a> | <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LGPD para saber mais</a></p>
+        </footer>
+    </div>
 </body>
 
 </html>
